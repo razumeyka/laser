@@ -1,0 +1,156 @@
+.flipster {
+  display: block;
+  overflow-x: hidden;
+  overflow-y: visible;
+  position: relative;
+}
+
+.flipster:focus {
+  outline: none;
+}
+
+.flipster__container,
+.flipster__item {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  position: relative;
+}
+
+.flipster__container {
+  display: block;
+  white-space: nowrap;
+  word-spacing: -0.25em;
+  transform-origin: 50% 50%;
+  backface-visibility: hidden;
+}
+
+.flipster__item {
+  display: inline-block;
+  white-space: normal;
+  word-spacing: normal;
+  vertical-align: bottom;
+}
+
+.flipster--click .flipster__item--past,
+.flipster--click .flipster__item--future {
+  cursor: pointer;
+}
+
+.flipster__content {
+    background-color: rgb(240, 240, 240);
+    box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.3);
+    padding: 8px 8px 20px;
+}
+
+.flipster__item img {
+  max-width: 100%;
+}
+
+.flipster__button {
+  position: absolute;
+  top: 50%;
+  display: block;
+  padding: 0;
+  z-index: 999;
+  cursor: pointer;
+  margin: -1em 2em;
+  border: 2px solid rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0, 0);
+  width: 41px;
+  height: 40px;
+}
+
+.flipster__button svg {
+  display: none;
+}
+
+.flipster__button--prev {
+  left: 0;
+}
+.flipster__button--next {
+  right: 0;
+}
+
+/* @group Flipster Carousel Theme */
+.flipster--carousel .flipster__container,
+.flipster--carousel .flipster__item,
+.flipster--carousel .flipster__item__content {
+  transition: all 350ms ease-in-out;
+  transition-timing-function: cubic-bezier(0.56, 0.12, 0.12, 0.98);
+}
+.flipster--carousel .flipster__item {
+  perspective: 700px;
+}
+.flipster--carousel .flipster__item--past,
+.flipster--carousel .flipster__item--future {
+  opacity: 0;
+  transition-delay: 115ms;
+}
+.flipster--carousel .flipster__item--past-2,
+.flipster--carousel .flipster__item--future-2 {
+  opacity: 1;
+  transition-delay: 90ms;
+}
+.flipster--carousel .flipster__item--past-1,
+.flipster--carousel .flipster__item--future-1 {
+  opacity: 1;
+  transition-delay: 60ms;
+}
+.flipster--carousel .flipster__item--past .flipster__item__content {
+  transform: translateX(100%) rotateY(-20deg) scale(0.5);
+}
+.flipster--carousel .flipster__item--past-2 .flipster__item__content {
+  transform: translateX(25%) rotateY(20deg) scale(0.65);
+}
+.flipster--carousel .flipster__item--past-1 .flipster__item__content {
+  transform: rotateY(14deg) scale(0.7);
+}
+.flipster--carousel .flipster__item--future .flipster__item__content {
+  transform: translateX(-100%) rotateY(20deg) scale(0.5);
+}
+.flipster--carousel .flipster__item--future-2 .flipster__item__content {
+  transform: translateX(-25%) rotateY(-20deg) scale(0.65);
+}
+.flipster--carousel .flipster__item--future-1 .flipster__item__content {
+  transform: rotateY(-14deg) scale(0.7);
+}
+.flipster--carousel.no-rotate .flipster__item--past .flipster__item__content {
+  transform: translateX(175%) scale(0.5);
+}
+.flipster--carousel.no-rotate .flipster__item--past-2 .flipster__item__content {
+  transform: translateX(25%) scale(0.65);
+}
+.flipster--carousel.no-rotate .flipster__item--past-1 .flipster__item__content {
+  transform: translateX(0%) scale(0.8);
+}
+.flipster--carousel.no-rotate .flipster__item--future .flipster__item__content {
+  transform: translateX(-175%) scale(0.5);
+}
+.flipster--carousel.no-rotate .flipster__item--future-2 .flipster__item__content {
+  transform: translateX(-25%) scale(0.65);
+}
+.flipster--carousel.no-rotate .flipster__item--future-1 .flipster__item__content {
+  transform: translateX(0%) scale(0.8);
+}
+.flipster--carousel .flipster__item--current .flipster__item__content {
+  transform: translateX(0) rotateY(0deg) scale(1);
+  transition-delay: 60ms;
+}
+
+/* @group Flat */
+.flipster--flat .flipster__container,
+.flipster--flat .flipster__item,
+.flipster--flat .flipster__item__content {
+  transition: all 400ms ease-in-out;
+}
+.flipster--flat .flipster__item--past,
+.flipster--flat .flipster__item--future {
+  opacity: 0.5;
+}
+.flipster--flat .flipster__item--past .flipster__item__content {
+  transform: scale(0.75);
+}
+.flipster--flat .flipster__item--future .flipster__item__content {
+  transform: scale(0.75);
+}

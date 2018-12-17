@@ -39,59 +39,65 @@
     <div class="services">
         <div class="wrapper">
            <div class="services__inner flex">
-               <div class="services__item-wr">
+                <div class="services__item-wr">
                    <div class="services__item services__item_1">
-                       <div class="services__content">
-                            <div class="slide">
+                        <div class="services__content-wr">
+                            <div class="services__content">
+                                <div class="slide">
+                                    <div class="services__service">
+                                        <div class="services__caption">КОМБО</div>
+                                        <div class="services__small-caption">mini</div>
+                                        <div class="services__type">Тотал. бикини</div>
+                                        <div class="services__type">Подмышки</div>
+                                        <div class="services__price">1400 <span>Р</span></div>
+                                    </div>
+                                </div>
+                                <div class="slide flex">
+                                    <a href="#" class="services__button button button_framed-white">Смотреть все услуги</a>
+                                </div>
+                            </div>
+                       </div>
+                   </div>
+                </div>
+               <div class="services__item-wr">
+                    <div class="services__item services__item_2">
+                       <div class="services__content-wr">
+                           <div class="services__content">
+                                <div class="slide">
                                 <div class="services__service">
                                     <div class="services__caption">КОМБО</div>
-                                    <div class="services__small-caption">mini</div>
+                                    <div class="services__small-caption">midi</div>
+                                    <div class="services__type">Голени</div>
                                     <div class="services__type">Тотал. бикини</div>
                                     <div class="services__type">Подмышки</div>
                                     <div class="services__price">1400 <span>Р</span></div>
                                 </div>
-                            </div>
-                            <div class="slide">
+                                </div>
+                                <div class="slide flex">
                                 <a href="#" class="services__button button button_framed-white">Смотреть все услуги</a>
-                            </div>
-                       </div>
-                   </div>
-               </div>
-               <div class="services__item-wr">
-                    <div class="services__item services__item_2">
-                       <div class="services__content">
-                            <div class="slide">
-                            <div class="services__service">
-                                <div class="services__caption">КОМБО</div>
-                                <div class="services__small-caption">midi</div>
-                                <div class="services__type">Голени</div>
-                                <div class="services__type">Тотал. бикини</div>
-                                <div class="services__type">Подмышки</div>
-                                <div class="services__price">1400 <span>Р</span></div>
-                            </div>
-                            </div>
-                            <div class="slide">
-                            <a href="#" class="services__button button button_framed-white">Смотреть все услуги</a>
-                            </div>
+                                </div>
+                           </div>
                        </div>
                    </div>
                </div>
                <div class="services__item-wr">
                    <div class="services__item services__item_3">
-                       <div class="services__content">
-                            <div class="slide">
-                            <div class="services__service">
-                                <div class="services__caption">КОМБО</div>
-                                <div class="services__small-caption">maxi</div>
-                                <div class="services__type">Ноги полностью</div>
-                                <div class="services__type">Тотал. бикини</div>
-                                <div class="services__type">Подмышки</div>
-                                <div class="services__price">2520 <span>P</span></div>
-                            </div>
-                            </div>
-                            <div class="slide">
-                            <a href="#" class="services__button button button_framed-white">Смотреть все услуги</a>
-                            </div>
+                       <div class="services__content-wr">
+                           <div class="services__content">
+                                <div class="slide">
+                                <div class="services__service">
+                                    <div class="services__caption">КОМБО</div>
+                                    <div class="services__small-caption">maxi</div>
+                                    <div class="services__type">Ноги полностью</div>
+                                    <div class="services__type">Тотал. бикини</div>
+                                    <div class="services__type">Подмышки</div>
+                                    <div class="services__price">2520 <span>P</span></div>
+                                </div>
+                                </div>
+                                <div class="slide flex">
+                                <a href="#" class="services__button button button_framed-white">Смотреть все услуги</a>
+                                </div>
+                           </div>
                        </div>
                    </div>
                </div>
@@ -100,7 +106,12 @@
     </div>
     @@include('template/photo-info.html')
     <div class="slider">
-        
+        <div class="pink-line">
+            <div class="pink-line__inner"></div>
+        </div>
+        <div class="wrapper">
+            @@include('template/flipster.html')
+        </div>
     </div>
     <div class="contacts">
         <div class="wrapper">

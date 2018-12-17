@@ -1,5 +1,5 @@
 @@include('./lib/jquery.fancybox.min.js')
-@@include('./lib/slider.js')
+@@include('./lib/jquery.flipster.min.js')
 
 $(document).ready(function(){
     
@@ -41,20 +41,19 @@ $(document).ready(function(){
     
 // services-hover
     	
-	$('.services__content').mouseenter(function () { 
-		$(this).addClass('services__content_active'); 
+	$('.services__item').mouseenter(function () { 
+		$(this).addClass('services__item_active'); 
 	});
 	
-	$('.services__content').mouseleave(function () { 
-		$(this).removeClass('services__content_active'); 
+	$('.services__item').mouseleave(function () { 
+		$(this).removeClass('services__item_active'); 
 	});
     
 //carousel slider
     
-$("#carousel").flipster({
+$(".flipster").flipster({
     style: 'carousel',
     spacing: -0.5,
-    nav: true,
     buttons: true,
 });
     

@@ -2,6 +2,8 @@
 @import "parts/base-blocks.less";
 @import "parts/header.less";
 @import "parts/photo-info.less";
+@import "parts/flipster.less";
+
 
 .main-screen {
     background: url(../images/mainscreen-bg.jpg) repeat center;
@@ -39,12 +41,12 @@
 
 .girl {
     background: url(../images/girl-mainscreen.png) no-repeat center;
-    width: 648px;
+    width: 696px;
     height: 630px;
     position: absolute;
-    left: 10px;
+    left: -17px;
     bottom: -186px;
-    padding: 110px 0 0 0;
+    padding: 110px 0 0 25px;
     box-sizing: border-box;
 }
 
@@ -154,23 +156,31 @@
 .services__item {
     box-sizing: border-box;
     background: url(../images/combo-bg-1.jpg) no-repeat center;
-    background-size: cover;
+    background-size: 100% 100%;
     height: 420px;
     padding: 55px;
     margin-top: -10px;
-    overflow: hidden;
+    transition: all 300ms ease-in;
 }
 
 .services__item_2 {
     background: url(../images/combo-bg-2.jpg) no-repeat center;
+    background-size: 100% 100%;
 }
 
 .services__item_3 {
     background: url(../images/combo-bg-3.jpg) no-repeat center;
+    background-size: 100% 100%;
 }
 
-.services__inner {
+.services__item_active {
+    background-size: 120% 120%;
+}
+
+.services__content-wr {
     overflow: hidden;
+    height: 100%;
+    padding-bottom: 10px;
 }
 
 .services__content{
@@ -179,20 +189,22 @@
     box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.3);
     height: 100%;
     position: relative;
-    padding: 45px 15px;
     width: 200%; 
     transition: margin-left 0.5s linear 0s;
     -webkit-transition: margin-left 0.5s linear 0s;
     -o-transition: margin-left 0.5s linear 0s;
 }
 
-.slide {
-    width: 50%;
-    float: left;
+.services__item_active .services__content  {
+    margin-left: -100%;
 }
 
-.services__content_active  {
-    margin-left: -100%;
+.slide {
+    box-sizing: border-box;
+    width: 50%;
+    height: 100%;
+    float: left;
+    padding: 45px 15px;
 }
 
 .services__service {
@@ -254,16 +266,37 @@
 }
 .services__button {
     margin: auto;
-    height: 60px;
-    line-height: 60px;
-    padding: 0 15px;
+    height: auto;
+    line-height: 1.5;
+    padding: 20px 15px;
 }
 
 .slider {
     background: url(../images/black-leaves-bg.jpg) no-repeat center;
     background-size: cover;
-    padding: 50px;
-    height: 500px;
+    padding: 60px 0;
+    position: relative;
+}
+
+.pink-line {
+    box-sizing: border-box;
+    background-color: rgb(217, 158, 175);
+    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 261px;
+    height:100%;
+    padding: 0 10px;
+}
+
+.pink-line__inner {
+  background-color: rgb(255, 186, 205);
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 100%;
 }
 
 .contacts__address {
