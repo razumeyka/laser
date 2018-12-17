@@ -38,4 +38,24 @@ $(document).ready(function(){
         $('.second_part').slideDown(500);
 		$('.more-info').toggleClass('more-info_active');
     });
+    
+// services-hover
+    	
+	$('.services__content').mouseenter(function () { 
+		$(this).addClass('services__content_active'); 
+	});
+	
+	$('.services__content').mouseleave(function () { 
+		$(this).removeClass('services__content_active'); 
+	});
+    
+//carousel slider
+    
+$("#carousel").flipster({
+    style: 'carousel',
+    spacing: -0.5,
+    nav: true,
+    buttons: true,
+});
+    
 }); 

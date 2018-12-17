@@ -9,13 +9,17 @@
     padding: 170px 0;
 }
 
+.logo {
+    position: relative;
+    box-sizing: border-box;
+    padding-left: 350px;
+    margin: 0 auto;
+}
+
 .bordered {
     box-sizing: border-box;
     border: 10px solid rgb(0, 0, 0);
-    max-width: 600px;
-    padding: 50px 72px 60px;
-    margin: auto;
-    position: relative;
+    padding: 50px 72px 60px 100px;
 }
 
 .bordered__laser {
@@ -35,12 +39,12 @@
 
 .girl {
     background: url(../images/girl-mainscreen.png) no-repeat center;
-    width: 630px;
+    width: 648px;
     height: 630px;
     position: absolute;
-    left: -310px;
-    bottom: -197px;
-    padding: 111px 0 0 0;
+    left: 10px;
+    bottom: -186px;
+    padding: 110px 0 0 0;
     box-sizing: border-box;
 }
 
@@ -54,9 +58,29 @@
     width: 292px;
     height: 507px;
     position: absolute;
-    left: -199px;
-    bottom: -214px;
+    left: 129px;
+    bottom: -201px;
     z-index: 1;
+}
+
+.leaf1 {
+    background: url(../images/leaf-mainscreen.png) no-repeat center;
+    width: 601px;
+    height: 865px;
+    position: absolute;
+    left: -733px;
+    bottom: -399px;
+    transform: rotate(116deg);
+}
+
+.leaf2 {
+    background: url(../images/leaf-mainscreen.png) no-repeat center;
+    width: 601px;
+    height: 865px;
+    position: absolute;
+    right: -776px;
+    bottom: -373px;
+    transform: rotate(235deg);
 }
 
 .info-block {
@@ -134,6 +158,7 @@
     height: 420px;
     padding: 55px;
     margin-top: -10px;
+    overflow: hidden;
 }
 
 .services__item_2 {
@@ -144,14 +169,30 @@
     background: url(../images/combo-bg-3.jpg) no-repeat center;
 }
 
+.services__inner {
+    overflow: hidden;
+}
+
 .services__content{
     box-sizing: border-box;
     background-color: rgba(0, 0, 0, 0.75);
     box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.3);
-    width: 100%;
     height: 100%;
     position: relative;
     padding: 45px 15px;
+    width: 200%; 
+    transition: margin-left 0.5s linear 0s;
+    -webkit-transition: margin-left 0.5s linear 0s;
+    -o-transition: margin-left 0.5s linear 0s;
+}
+
+.slide {
+    width: 50%;
+    float: left;
+}
+
+.services__content_active  {
+    margin-left: -100%;
 }
 
 .services__service {
@@ -212,7 +253,6 @@
     left: 1px;
 }
 .services__button {
-    display: none;
     margin: auto;
     height: 60px;
     line-height: 60px;
