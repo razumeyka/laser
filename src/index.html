@@ -4,26 +4,26 @@
 <body>
     @@include('template/header.html')
     <div class="main-screen">
-        <div class="wrapper flex">
+        <div class="overflow flex">
             <div class="logo">
-                <div class="bordered">
-                    <div class="bordered__laser">laser</div>
-                    <div class="bordered__city">Новокузнецк</div>
+                <div class="logo__bordered">
+                    <div class="logo__laser">laser</div>
+                    <div class="logo__city">Новокузнецк</div>
                 </div>
-                <div class="girl">
-                        <div class="relax">Relax</div>
+                <div class="logo__girl">
+                        <div class="logo__relax">Relax</div>
                     </div> 
-                <div class="girl-top"></div>
-                <div class="leaf1"></div>
-                <div class="leaf2"></div>
+                <div class="logo__girl-top"></div>
+                <div class="leaf leaf_left"></div>
+                <div class="leaf leaf_right"></div>
             </div>                       
         </div>
     </div>
     <div class="info-block">
-        <div class="wrapper">
-            <h1 class="info-block__caption">Пробная эпиляция <span class="underlined">бесплатно!</span></h1>
+        <div class="wrapper info-block__inner">
+            <h1 class="caption">Пробная эпиляция <span class="underlined">бесплатно!</span></h1>
             <div class="info-block__description">Мы лучше всех, а еще у нас очень современный лазер. Записывайтесь на пробную лазерную эпиляцию, покупайте абонементы. Тут нужно написать <b>какой-то интересный текст</b>, пару слов с глубоким смыслом и ключевыми словами для поисковых роботов. Необходимо склонить пользователей кликнуть на розовую кнопочку!</div>
-            <div class="icon-stripes">
+            <div class="icon-stripes icon-stripes_home">
                 <div class="icon-stripes__stripes"></div>
                 <a href="#" class="icon-stripes__icon">
                 </a>
@@ -43,17 +43,17 @@
                    <div class="services__item services__item_1">
                         <div class="services__content-wr">
                             <div class="services__content">
-                                <div class="slide">
+                                <div class="services__slide">
                                     <div class="services__service">
                                         <div class="services__caption">КОМБО</div>
                                         <div class="services__small-caption">mini</div>
                                         <div class="services__type">Тотал. бикини</div>
                                         <div class="services__type">Подмышки</div>
-                                        <div class="services__price">1400 <span>Р</span></div>
+                                        <div class="services__price">1400</div>
                                     </div>
                                 </div>
-                                <div class="slide flex">
-                                    <a href="#" class="services__button button button_framed-white">Смотреть все услуги</a>
+                                <div class="services__slide flex">
+                                    <a href="#" class="services__button button button_framed_white">Смотреть все услуги</a>
                                 </div>
                             </div>
                        </div>
@@ -63,18 +63,18 @@
                     <div class="services__item services__item_2">
                        <div class="services__content-wr">
                            <div class="services__content">
-                                <div class="slide">
+                                <div class="services__slide">
                                 <div class="services__service">
                                     <div class="services__caption">КОМБО</div>
                                     <div class="services__small-caption">midi</div>
                                     <div class="services__type">Голени</div>
                                     <div class="services__type">Тотал. бикини</div>
                                     <div class="services__type">Подмышки</div>
-                                    <div class="services__price">1400 <span>Р</span></div>
+                                    <div class="services__price">1400</div>
                                 </div>
                                 </div>
-                                <div class="slide flex">
-                                <a href="#" class="services__button button button_framed-white">Смотреть все услуги</a>
+                                <div class="services__slide flex">
+                                <a href="#" class="services__button button button_framed_white">Смотреть все услуги</a>
                                 </div>
                            </div>
                        </div>
@@ -84,18 +84,18 @@
                    <div class="services__item services__item_3">
                        <div class="services__content-wr">
                            <div class="services__content">
-                                <div class="slide">
+                                <div class="services__slide">
                                 <div class="services__service">
                                     <div class="services__caption">КОМБО</div>
                                     <div class="services__small-caption">maxi</div>
                                     <div class="services__type">Ноги полностью</div>
                                     <div class="services__type">Тотал. бикини</div>
                                     <div class="services__type">Подмышки</div>
-                                    <div class="services__price">2520 <span>P</span></div>
+                                    <div class="services__price">2520</div>
                                 </div>
                                 </div>
-                                <div class="slide flex">
-                                <a href="#" class="services__button button button_framed-white">Смотреть все услуги</a>
+                                <div class="services__slide flex">
+                                <a href="#" class="services__button button button_framed_white">Смотреть все услуги</a>
                                 </div>
                            </div>
                        </div>
@@ -106,9 +106,7 @@
     </div>
     @@include('template/photo-info.html')
     <div class="slider">
-        <div class="pink-line">
-            <div class="pink-line__inner"></div>
-        </div>
+        <div class="pink-line"></div>
         <div class="wrapper">
             @@include('template/flipster.html')
         </div>
@@ -118,7 +116,7 @@
             <div class="contacts__address">г. Новокузнецк<br>
             пр. Металлургов, д. 26, оф. 102</div>
             <a href="tel:89134140505" class="contacts__phone">8 (913) 414 05 05</a>
-            <div class="icon-stripes">
+            <div class="icon-stripes icon-stripes_home">
                 <div class="icon-stripes__stripes"></div>
                 <a href="#" class="icon-stripes__icon icon-stripes__icon_insta">
                 </a>

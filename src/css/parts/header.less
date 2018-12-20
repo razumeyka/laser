@@ -37,3 +37,111 @@ header {
     margin: auto 0;
 }
 
+/*burger*/
+
+.burger {
+    display: none;
+    position: absolute;
+    width: 40px;
+    height: 42px;
+    left: 15px;
+    top: 10px;
+    cursor: pointer;
+    border: 2px solid rgb(255,255,255);
+    border-radius: 3px;
+}
+
+.burger span, .burger span::before, .burger span::after {
+    display: block;
+    cursor: pointer;
+    border-radius: 5px;
+    height: 3px;
+    width: 30px;
+    background: rgb(255,255,255);
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    transition: all 200ms ease-in-out;
+}
+
+.burger span::before {
+    content: '';
+    left: 0;
+}
+
+.burger span::after {
+    content: '';
+    left: 0;
+    top: 20px;
+}
+
+.burger_active span {
+    background-color: transparent;
+}
+    
+ .burger_active span::before  {
+    transform: rotate(45deg);
+    top: 10px;
+}
+
+ .burger_active span::after  {
+    transform: rotate(-45deg);
+    top: 10px;
+} 
+
+
+
+
+@media screen and (max-width: 1279px) {
+
+}
+
+
+@media screen and (max-width: 1023px) {
+    
+    header {
+        height: 66px;
+    }
+    
+    header .burger {
+        display: block;
+    }
+    
+    header .menu {
+        display: none;
+        height: auto;
+        position: absolute;
+        top: 66px;
+        left: 0;
+        margin: 0;
+        width: 100%;
+        text-align: center;
+        background: #f4c7d6;
+        z-index: 2;
+        padding: 0;
+    }
+    
+    header .menu li {
+        float: none;
+    }
+    
+    header .menu li a {
+        display: block;
+        border-bottom: 1px solid #f5f5f5;
+        padding: 15px;
+    }
+    
+    header .menu>li:first-child a {
+        padding: 15px;
+    }
+}
+
+
+@media screen and (max-width: 767px) {
+
+}
+
+@media screen and (max-width: 639px) {
+    
+}
+

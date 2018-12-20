@@ -4,12 +4,20 @@
 @import "parts/photo-info.less";
 @import "parts/flipster.less";
 
-
 .main-screen {
     background: url(../images/mainscreen-bg.jpg) repeat center;
     background-size: cover;
-    padding: 170px 0;
+    position: relative;
+    height: 620px;
+}
+
+.overflow {
     overflow: hidden;
+    width: 100%;
+    height: 700px;
+    padding-top: 170px;
+    position: absolute;
+    top: 0;
 }
 
 .logo {
@@ -19,13 +27,13 @@
     margin: 0 auto;
 }
 
-.bordered {
+.logo__bordered {
     box-sizing: border-box;
     border: 10px solid rgb(0, 0, 0);
     padding: 50px 72px 60px 100px;
 }
 
-.bordered__laser {
+.logo__laser {
     font: 900 110px "Raleway";
     line-height: 1.1;
     letter-spacing: 7px;
@@ -33,56 +41,55 @@
     text-align: right;
 }
 
-.bordered__city {
+.logo__city {
     font: 500 32px "Raleway";
     text-transform: uppercase;
     letter-spacing: 12px;
     text-align: right;
 }
 
-.girl {
+.logo__girl {
     background: url(../images/girl-mainscreen.png) no-repeat center;
     width: 696px;
     height: 630px;
     position: absolute;
     left: -17px;
-    bottom: -186px;
+    top: -163px;
     padding: 110px 0 0 25px;
     box-sizing: border-box;
 }
 
-.relax {
+.logo__relax {
     font-size: 268px;
     font-family: "Julietta";
 }
 
-.girl-top {
+.logo__girl-top {
     background: url(../images/girl-mainscreen-top.png) no-repeat top;
     width: 292px;
     height: 507px;
     position: absolute;
     left: 127px;
-    bottom: -203px;
+    bottom: 216px;
     z-index: 1;
 }
 
-.leaf1 {
+.leaf {
     background: url(../images/leaf-mainscreen.png) no-repeat center;
     width: 601px;
     height: 865px;
-    position: absolute;
+    position: absolute;    
+}
+
+.leaf_left {
     left: -733px;
-    bottom: -399px;
+    bottom: 15px;
     transform: rotate(116deg);
 }
 
-.leaf2 {
-    background: url(../images/leaf-mainscreen.png) no-repeat center;
-    width: 601px;
-    height: 865px;
-    position: absolute;
+.leaf_right {
     right: -776px;
-    bottom: -373px;
+    bottom: 42px;
     transform: rotate(235deg);
 }
 
@@ -90,9 +97,14 @@
     padding: 50px 0 60px;
 }
 
-.info-block__caption {
+.info-block__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.caption {
     font: 700 36px "Acrom";
-    text-align: center;
     margin-bottom: 20px;
 }
 
@@ -103,15 +115,16 @@
 }
 
 .info-block__description {
-    font: 400 20px "ProximaNova";
-    text-align: center;
     line-height: 1.35;
+}
+
+.icon-stripes_home {
+    margin: 20px auto 25px;
 }
 
 .icon-stripes {
     position: relative;
     width: 235px;
-    margin: 20px auto;
 }
 
 .icon-stripes__icon {
@@ -131,10 +144,6 @@
     top: 30px;
 }
 
-.info-block__button {
-    margin: 25px auto 0;
-}
-
 .services {
     background: url(../images/black-leaves-bg.jpg) no-repeat center;
     background-size: cover;
@@ -150,6 +159,7 @@
 .services__item-wr {
     box-sizing: border-box;
     background: #ffbacd;
+    box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.3);
     width: 33.3333%;
     padding: 0 10px 10px;
     margin: 0 20px;
@@ -159,6 +169,7 @@
     box-sizing: border-box;
     background: url(../images/combo-bg-1.jpg) no-repeat center;
     background-size: 100% 100%;
+    box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.3);
     height: 420px;
     padding: 55px;
     margin-top: -10px;
@@ -182,7 +193,7 @@
 .services__content-wr {
     overflow: hidden;
     height: 100%;
-    padding-bottom: 10px;
+    padding-bottom: 15px;
 }
 
 .services__content{
@@ -201,7 +212,7 @@
     margin-left: -100%;
 }
 
-.slide {
+.services__slide {
     box-sizing: border-box;
     width: 50%;
     height: 100%;
@@ -233,7 +244,7 @@
 }
 
 .services__type {
-    font: 400 18px "ProximaNova";
+    font-size: 18px;
     color: rgb(255, 255, 255);
     margin: 3px 0;
 }
@@ -246,26 +257,22 @@
     color: rgb(0, 0, 0);
     text-transform: uppercase;
     text-align: center;
-    padding: 5px 20px;
+    padding: 5px 45px 5px 20px;
     position: absolute;
     bottom: -10px;
     margin: 0 auto;
 }
 
-.services__price span {
-    display: inline-block;
-    position: relative;
-}
-
-.services__price span::before {
+.services__price::before {
     content: "";
     background: #000;
-    width: 14px;
-    height: 3px;
+    width: 20px;
+    height: 25px;
     position: absolute;
-    bottom: 10px;
-    left: 1px;
+    bottom: 11px;
+    right: 20px;
 }
+
 .services__button {
     margin: auto;
     height: auto;
@@ -280,6 +287,10 @@
     position: relative;
 }
 
+.slider .wrapper {
+    max-width: 770px;
+}
+
 .pink-line {
     box-sizing: border-box;
     background-color: rgb(217, 158, 175);
@@ -291,18 +302,22 @@
     margin: 0 auto;
     width: 261px;
     height:100%;
-    padding: 0 10px;
 }
 
-.pink-line__inner {
-  background-color: rgb(255, 186, 205);
-  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.3);
-  width: 100%;
-  height: 100%;
+.pink-line:before {
+    content: "";
+    background-color: rgb(255, 186, 205);
+    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.3);
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    right: 10px;
 }
 
 .contacts__address {
     font-size: 20px;
+    font-family: "Acrom";
     text-align: center;
 }
 
@@ -342,6 +357,10 @@ footer .menu a {
     color: rgb(0, 0, 0);
 } 
 
+footer .menu>li:first-child a {
+    padding: 25px 15px;
+}
+
 .footer2 {
     background: rgb(0,0,0);
     font-size: 13px;
@@ -352,10 +371,9 @@ footer .menu a {
 
 .footer2 a {
     font-size: 13px;
+    font-family: "Acrom";
     color: rgb(255, 255, 255);
 }
-
-
 
 /*media*/
 
@@ -371,14 +389,78 @@ footer .menu a {
     .wrapper {
         padding: 0 15px;
     }
+    
+    .leaf {
+        display: none;
+    }
+    
+    .photo-info__background {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 1023px) {
+    
+    .logo {
+        padding-left: 210px;
+    }
+    
+    .logo__bordered {
+        padding: 50px 30px 50px 100px;
+    }
+    
+    .logo__girl {
+        transform: scale(0.7);
+        left: -108px;
+    }
+    
+    .logo__girl-top {
+        left: 53px;
+        bottom: 241px;
+        transform: scale(.7);
+    }
+    
+    .services__inner {
+        flex-wrap: wrap;
+        margin: 0;
+    }
+    
+    .services__item-wr {
+        width: 100%;
+        max-width: 400px;
+        margin: 15px auto;
+}
+    
+    .photo-info .wrapper {
+        flex-direction: column-reverse;
+    }
+    
+    .photo-info__information {
+        max-width: none;
+        padding: 50px 0;
+    }
+    
+    .photo-info__photo {
+        max-width: 500px;
+        height: 500px;
+        margin: 0 auto 20px;
+    }
 
 }
 
 @media screen and (max-width: 767px) {
-
+    footer .menu li {
+        float: none;
+        text-align: center;
+    }
+    
+    .logo__girl {
+        background: none;
+    }
+    
+    .logo__girl-top {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 639px) {
