@@ -11,14 +11,21 @@ $(document).ready(function(){
     });
     
 // services-hover
+
+
     	
 	$('.services__item').mouseenter(function () { 
+		if(window.innerWidth<1280) return;
 		$(this).addClass('services__item_active'); 
 	});
 	
 	$('.services__item').mouseleave(function () { 
+		if(window.innerWidth<1280) return;
 		$(this).removeClass('services__item_active'); 
 	});
+
+
+
     
 //carousel slider
     

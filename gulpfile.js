@@ -7,8 +7,8 @@ var gulp = require('gulp'),
 	cleanCSS = require('gulp-clean-css'),
     browserSync = require("browser-sync"),
 	less = require('gulp-less'),
-	fileinclude = require('gulp-file-include'),
-    reload = browserSync.reload;
+	fileinclude = require('gulp-file-include');
+   // reload = browserSync.reload;
 	
 
 var path = {
@@ -29,7 +29,7 @@ var path = {
     watch: { //Тут мы укажем, за изменением каких файлов мы хотим наблюдать
         html: 'src/**/*.html',
         js: 'src/js/**/*.js',
-        css: 'src/css/**/*.less',
+        css: 'src/css/**/*.*ss',
         images: 'src/images/**/*.*',
         fonts: 'src/fonts/**/*.*'
     },
@@ -51,8 +51,8 @@ gulp.task('html:build', function () {
 			prefix: '@@',
 			basepath: '@file'
 		}))
-        .pipe(gulp.dest(path.build.html))
-        .pipe(reload({stream: true})); //И перезагрузим наш сервер для обновлений
+        .pipe(gulp.dest(path.build.html));
+        //.pipe(reload({stream: true})); //И перезагрузим наш сервер для обновлений
 });
 
 gulp.task('js:build', function () {
@@ -64,8 +64,8 @@ gulp.task('js:build', function () {
         .pipe(sourcemaps.init()) //Инициализируем sourcemap
 //        .pipe(uglify()) //Сожмем наш js
         .pipe(sourcemaps.write()) //Пропишем карты
-        .pipe(gulp.dest(path.build.js)) //Выплюнем готовый файл в build
-        .pipe(reload({stream: true})); //И перезагрузим сервер
+        .pipe(gulp.dest(path.build.js)); //Выплюнем готовый файл в build
+       // .pipe(reload({stream: true})); //И перезагрузим сервер
 });
 gulp.task('js:buildnosource', function () {
    return gulp.src(path.src.js) //Найдем наш main файл
@@ -83,8 +83,8 @@ gulp.task('css:build', function(){
     .pipe(less())
 	.pipe(cleanCSS({compatibility: 'ie8'}))
 	.pipe(sourcemaps.write())
-    .pipe(gulp.dest('build/css'))
-    .pipe(reload({stream: true})); //И перезагрузим сервер
+    .pipe(gulp.dest('build/css'));
+   // .pipe(reload({stream: true})); //И перезагрузим сервер
 });
 gulp.task('css:buildnosource', function(){
   return gulp.src(path.src.style)

@@ -55,8 +55,13 @@
     margin: -1em 2em;
     border: 2px solid rgb(255, 255, 255);
     outline: none;
-    width: 41px;
+    width: 40px;
     height: 40px;
+	background: url(../images/sprites.svg) no-repeat -210px -26px;
+}
+
+.flipster__button:hover{
+    background-color: #ffffff29;
 }
 
 .flipster__button svg {
@@ -68,6 +73,7 @@
 }
 .flipster__button--next {
   right: -258px;
+  background: url(../images/sprites.svg) no-repeat -279px -26px;
 }
 
 /* @group Flipster Carousel Theme */
@@ -151,4 +157,17 @@
 }
 .flipster--flat .flipster__item--future .flipster__item__content {
   transform: scale(0.75);
+}
+
+
+
+
+
+
+@media screen and (max-width: 1279px) {
+
+	.flipster__button{
+		display:none;
+	}
+
 }

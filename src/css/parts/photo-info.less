@@ -3,6 +3,7 @@
 }
 
 .photo-info .wrapper {
+	justify-content: center;
     position: relative;
 }
 
@@ -18,7 +19,7 @@
 
 .photo-info__photo {
     background: url(../images/machine.png) no-repeat center;
-    background-size: 100% auto;
+    background-size: contain;
     flex: 1;
 }
 
@@ -45,5 +46,60 @@
 
 .photo-info__text {
     margin: auto 0;
- j   flex: 1;
+	flex: 1;
 }
+
+
+@media screen and (max-width: 1279px) {
+	
+    .photo-info__background {
+        display: none;
+    }
+	
+	.photo-info__information{
+		padding: 50px 0 30px 30px;
+	}
+    
+    .photo-info__photo {
+        width: 100%;
+        max-width: 420px;
+        height: 500px;
+        margin: auto;
+		flex: none;
+    }
+ 
+	
+}
+
+@media screen and (max-width: 1023px) {
+	
+    
+    .photo-info .wrapper {
+		flex-direction: column;
+		align-items: center;
+    }
+    
+    .photo-info__information { 
+        padding: 40px 0 0;
+    }
+	
+	.photo-info__photo{
+		height: 340px;
+	}
+	
+	.photo-info{
+		padding: 40px 0 20px;
+	}
+	
+}
+
+@media screen and (max-width: 639px) {
+	
+	.photo-info__number{
+		font-size: 42px;
+		min-width: 60px;
+	}
+
+}
+
+
