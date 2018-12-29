@@ -24,6 +24,13 @@ $(document).ready(function(){
 		$(this).removeClass('services__item_active'); 
 	});
 
+//accordeon
+
+ $(".accordion__full").hide();
+    $('.accordion__spoiler').click(function(){
+        $(this).next().slideToggle(300);
+        $(this).toggleClass('accordion__spoiler_active');
+    });
 
 
     

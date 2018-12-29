@@ -1,0 +1,70 @@
+
+.accordion{ 
+    max-width: 800px;
+    margin: 0 auto;
+	border-bottom: 1px solid #e3e3e3;
+}
+
+.accordion__item{ 
+}
+
+.accordion__spoiler{
+    position: relative;
+    box-sizing: border-box;
+    border-top: 1px solid #e3e3e3;
+    padding: 15px 75px;
+    cursor: pointer;
+}
+
+.accordion__spoiler:before{
+    content: "";
+    background: red;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 10px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.accordion__spoiler_active:before{
+	background-position: -133px -110px;
+}
+
+.accordion__spoiler h2{ 
+	font-size: 20px;
+}
+
+.accordion__full{
+    border-top: 1px solid #d6cfc4;
+    padding: 5px 75px;
+    font-size: 16px;
+}
+
+
+
+@media screen and (max-width: 1023px) {
+	
+	.accordion__full{
+		padding: 5px 0;
+	}
+	
+}
+
+
+@media screen and (max-width: 639px) {
+	
+	.accordion__item{
+		text-align: left;
+	}
+	
+	.accordion__spoiler{
+		padding: 15px 15px 15px 75px;
+	}
+	
+	.accordion__spoiler h2 {
+		font-size: 18px;
+	}
+	
+}

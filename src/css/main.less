@@ -4,11 +4,19 @@
 @import "parts/photo-info.less";
 @import "parts/flipster.less";
 @import "parts/css-shake.css";
+@import "parts/page-services.css";
+@import "parts/page-faq.css";
+@import "parts/page-stock.css";
 
 .main-screen {
     background: url(../images/mainscreen-bg.jpg) repeat center;
     background-size: cover;
-    position: relative;
+    position: relative; 
+	padding: 30px 15px;
+}
+
+.home .main-screen {
+	padding:0;
     height: 620px;
 }
 
@@ -105,10 +113,10 @@
     height: 90px;
 	background: url(../images/logo.svg) no-repeat center;
 	background-size: contain;
-	margin: auto
+	margin: auto;
 }
 
-.logo-small__home{
+.home .logo-small{
 	display: none;
 }
 
@@ -124,29 +132,22 @@
     align-items: center;
 }
 
-.caption {
-    font: 700 36px "Acrom";
-    margin-bottom: 20px;
-}
-
-.underlined {
-    text-transform: uppercase;
-    position: relative;
-    background-image: linear-gradient( 0deg, rgb(255, 186, 205) 0%, rgb(255, 186, 205) 35%, rgb(255, 255, 255) 35%, rgb(255, 255, 255) 100% );
-}
-
 .info-block__caption,
 .info-block__description { 
     text-align: center;
-}
-
-.icon-stripes_home {
-    margin: 20px auto 25px;
-}
+} 
 
 .icon-stripes {
     position: relative;
-    width: 235px;
+    width: 235px; 
+}
+
+.home .icon-stripes {
+    margin: 20px auto 25px;	
+}
+
+.inner-page .icon-stripes {
+    margin: 20px auto 40px;	
 }
 
 .icon-stripes__icon {
@@ -410,7 +411,7 @@ footer .menu>li:first-child a {
         padding: 0 15px;
     } 
 	
-	.main-screen{
+	.home .main-screen{
 		height: auto;
 		padding: 30px 15px;
 	}
@@ -421,7 +422,7 @@ footer .menu>li:first-child a {
 		padding:0;
 	}
 	
-	.logo-small__home{
+	.home .logo-small{
 		display: block;
 	}
 	
@@ -555,11 +556,7 @@ footer .menu>li:first-child a {
     
 	body{
 		font-size: 18px;
-	}
-	
-	.caption{
-		font-size: 30px;
-	}
+	} 
 	
 	.slider__wrapper { 
 		zoom: 0.9;
