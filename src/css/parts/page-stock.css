@@ -3,7 +3,7 @@
 }
 
 .stock__item{
-    margin-top: 80px;
+    margin-top: 90px;
 }
 
 .stock__item:first-child{
@@ -12,29 +12,8 @@
 
 .stock__preview{
     width: 400px;
-    margin: 0 auto 30px;
-    font-size: 0;
-    line-height: 0;
-    position: relative;
-}
-
-.stock__preview:before{
-	content: '';
-    position: absolute;
-    top: 15px;
-    left: -15px;
-    right: -15px;
-    border: 4px solid #000;
-    height: 100%;
-    box-sizing: border-box;
-	
-}
-
-.stock__preview img{
-	max-width: 100%;
-	height: auto;
-    position: relative;
-}
+    margin: 0 auto 30px; 
+} 
 
 .stock__button{
 	margin-top: 20px;
