@@ -3,7 +3,11 @@
 }
 
 .stock__item{
-	
+    margin-top: 80px;
+}
+
+.stock__item:first-child{
+	margin-top:0;
 }
 
 .stock__preview{
@@ -32,14 +36,15 @@
     position: relative;
 }
 
-.stock__caption{
-	
-}
-
-.stock__desc{
-	
-}
-
 .stock__button{
+	margin-top: 20px;
+}
+
+
+@media screen and (max-width: 767px) {
 	
+	.stock__preview{
+		width: 300px;
+	} 
+
 }
