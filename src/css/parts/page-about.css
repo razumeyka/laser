@@ -1,0 +1,14 @@
+
+.about-page__image{
+    max-width: 600px;
+    margin: 40px auto 55px;
+}
+
+
+@media screen and (max-width: 767px) {
+	
+	.about-page__image{
+		max-width: 300px;
+	}
+
+}
