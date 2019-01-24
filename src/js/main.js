@@ -1,5 +1,6 @@
 @@include('./lib/jquery.fancybox.min.js')
 @@include('./lib/jquery.flipster.min.js')
+@@include('./lib/wpcf7.js')
 
 $(document).ready(function(){
     
