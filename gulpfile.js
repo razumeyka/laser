@@ -39,7 +39,7 @@ var config = {
     server: {
         baseDir: "./build"
     },
-    tunnel: true,
+    //tunnel: true,
     host: 'localhost',
     port: 80,
     logPrefix: "shiziksma"
